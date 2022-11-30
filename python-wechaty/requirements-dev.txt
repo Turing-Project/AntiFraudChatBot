@@ -1,0 +1,27 @@
+# use the latest version of setuptools
+setuptools>=63.2.0
+flake8
+mypy
+mypy_extensions
+pycodestyle
+pylint
+pylint-quotes
+pytest
+
+# TODO(wj-Mcat): find out why latest pytest-asyncio will make test failed
+pytest-asyncio==0.18.3
+pytest-cov
+pytype
+semver
+pyee
+requests
+qrcode
+apscheduler
+lxml
+pre-commit
+mkdocs
+mkdocs-material
+types-requests
+mkdocstrings
+mkdocstrings-python-legacy
+yapf

@@ -1,0 +1,11 @@
+pyee
+requests
+qrcode
+lxml
+wechaty-puppet>=0.4.19
+wechaty-puppet-service>=0.8.9
+quart
+opengraph_py3
+Quart-CORS
+APScheduler
+SQLAlchemy

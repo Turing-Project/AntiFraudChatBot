@@ -1,0 +1,28 @@
+[tool.mypy]
+disallow_untyped_defs = true
+warn_unused_ignores = true
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = [
+    "qrcode.*",
+    "wechaty_puppet.*",
+    "pytest.*",
+    "grpclib.*",
+    "lxml.*",
+    "apscheduler.*",
+    "pyee.*"
+]
+ignore_missing_imports = true
+
+# refer to: https://docs.pytest.org/en/stable/mark.html
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov-report term-missing --cov-report xml --cov=src/"
+testpaths = [
+    "tests",
+]
+markers = [
+    "asyncio"
+]
+pythonpath='./src'

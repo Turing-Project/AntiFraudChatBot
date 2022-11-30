@@ -1,0 +1,3 @@
+# wechaty.config
+
+:::wechaty.config

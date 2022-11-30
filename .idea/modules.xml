@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AntifraudBOT.iml" filepath="$PROJECT_DIR$/.idea/AntifraudBOT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Tureco/ES/RSS3_SearchEngine.iml" filepath="$PROJECT_DIR$/../../../Tureco/ES/RSS3_SearchEngine.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,70 @@
+# the hook execution directory in under git root directory
+repos:
+- repo: local
+  hooks:
+
+  - id: pylint
+    name: pylint
+    description: "Pylint: Checks for errors in Python code"
+    language: system
+    entry: make pylint
+    always_run: true
+    verbose: true
+    require_serial: true
+    stages: [push]
+    types: [python]
+
+  - id: pycodestyle
+    name: pycodestyle
+    description: "pycodestyle: Check your Python code against styles conventions in PEP 8"
+    language: system
+    entry: make pycodestyle
+    always_run: true
+    verbose: true
+    require_serial: true
+    stages: [push]
+    types: [python]
+
+  - id: flake8
+    name: flake8
+    description: "flake8: Tool For Style Guide Enforcement"
+    language: system
+    entry: make flake8
+    always_run: true
+    verbose: true
+    require_serial: true
+    stages: [push]
+    types: [python]
+
+  - id: mypy
+    name: mypy
+    description: "mypy: an optional static type checker for Python"
+    language: system
+    entry: make mypy
+    always_run: true
+    verbose: true
+    require_serial: true
+    stages: [push]
+    types: [python]
+
+  - id: pytest
+    name: pytest
+    description: "pytest: run python pytest unit test"
+    language: system
+    entry: make pytest
+    always_run: true
+    verbose: true
+    require_serial: true
+    stages: [push]
+    types: [python]
+
+  - id: bump-version
+    name: bump-version
+    description: "Bumped Version: bump the version when a new commit come in"
+    language: system
+    always_run: true
+    verbose: true
+    entry: make version
+    require_serial: true
+    stages: [push]
+    types: [python]

@@ -1,0 +1,43 @@
+language: zh
+pipeline:
+- name: HFTransformersNLP
+  model_weights: "bert-base-chinese"
+  model_name: "bert"
+
+- name: LanguageModelTokenizer
+- name: LanguageModelFeaturizer
+
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+
+- name: DIETClassifier
+  epochs: 30
+  learning_rate: 0.005
+  num_transformer_layers: 0
+  embedding_dimension: 30
+  weight_sparcity: 0.8
+  hidden_layer_sizes:
+    text: [256, 128]
+
+policies:
+  - name: AugmentedMemoizationPolicy
+  
+  - name: TEDPolicy
+    epochs: 100
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 5
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
+
+
+  - name: FallbackPolicy
+    fallback_action_name: 'action_default_fallback'
+    nlu_threshold: 0.5
+    core_threshold: 0.3
+    ambiguity_threshold: 0.1
+  
+  - name: MappingPolicy

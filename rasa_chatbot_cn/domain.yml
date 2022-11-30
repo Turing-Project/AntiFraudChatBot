@@ -1,0 +1,74 @@
+slots:
+  item:
+    type: text
+  time:
+    type: text
+  phone_number:
+    type: text
+  price:
+    type: text
+  package:
+    type: text
+
+intents:
+  - greet
+  - confirm
+  - goodbye
+  - thanks
+  - inform
+  - request_management
+  - request_search
+  - deny
+  - unknown_intent
+
+entities:
+  - item
+  - time
+  - phone_number
+  - price
+  - package
+
+templates:
+  utter_greet:
+    - text: "您好! 我是机器人小贝，很高兴为您服务。"
+    - text: "你好! 我是小贝，可以帮您办理流量套餐，话费查询等业务。"
+    - text: "hi! 我是小贝，有什么可以帮您吗。"
+  utter_goodbye:
+    - text: "再见，为您服务很开心"
+    - text: "Bye， 下次再见"
+  utter_default:
+    - text: "您说什么，小贝听不懂。"
+    - text: "你说的小贝不懂呀！"
+    - text: "不好意思，您能换个说法吗？"
+  utter_thanks:
+    - text: "不用谢"
+    - text: "我应该做的"
+    - text: "您开心我就开心"
+  utter_ask_morehelp:
+    - text: "还有什么能帮您吗？"
+    - text: "您还需要什么服务？"
+  utter_ask_time:
+    - text: "你想查哪个时间段的？"
+    - text: "你想查几月份的？"
+  utter_ask_phonenum:
+    - text: "你想查的手机号码是？"
+  utter_confirm:
+    - text: "你确认吗？"
+  utter_ask_package:
+    - text: "我们现在支持办理流量套餐：套餐一：二十元包月三十兆；套餐二：四十元包月八十兆，请问您需要哪个？"
+    - text: "我们有如下套餐供您选择：套餐一：二十元包月三十兆；套餐二：四十元包月八十兆，请问您需要哪个？"
+  utter_ack_management:
+    - text: "已经为您办理好了{package}"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_default
+  - utter_thanks
+  - utter_ask_morehelp
+  - utter_ask_time
+  - utter_ask_package
+  - utter_ack_management
+  - utter_ask_phonenum
+  - utter_confirm
+  - action_search_consume

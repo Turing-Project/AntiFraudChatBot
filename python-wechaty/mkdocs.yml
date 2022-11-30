@@ -1,0 +1,99 @@
+site_name: python-wechaty
+repo_url: http://github.com/wechaty/python-wechaty
+repo_name: GitHub
+site_description: 'python-wechaty AI Chatbot'
+copyright: '@wechaty community'
+nav:
+  - 介绍: 'index.md'
+  - 快速开始:
+    - 介绍: 'tutorials/index.md' 
+    - 使用Padlocal协议快速开始一个微信机器人: 'tutorials/use_padlocal_getting_started.md'
+    - 使用免费web协议快速开始一个微信机器人: 'tutorials/use_web_getting_started.md'
+    - 使用paimon协议快速开始一个微信机器人: 'tutorials/use_paimon_getting_started.md'
+    - 视频教程: 'tutorials/videos.md'
+  - 使用指南:
+    - 介绍: 'how-to/how-to_introduction.md'
+    - 如何添加好友: 'how-to/how-to_add_friendship.md' 
+    - 如何关键字入群: 'how-to/how-to_room_inviter.md'
+    - 如何完成自动回复: 'how-to/how-to_auto_reply.md'
+    - 如何检索群聊或联系人: 'how-to/how-to_finder.md'
+    - 如何完成任务调度: 'how-to/how-to_scheduler.md'
+    - 如何完成群消息同步: 'how-to/how-to_message_forward.md'
+    - 如何使用Rasa Sever: 'how-to/how-to_rasa.md'
+    - 如何使用Github Webhook插件: 'how-to/how-to_github_webhook.md'
+    - 如何使用Gitlab Webhook插件: 'how-to/how-to_gitlab_webhook.md'
+    - 如何使用插件系统: 'how-to/how-to_use_plugin.md'
+  - 模块详解:
+    - 介绍: 'references/index.md'
+    - 'Wechaty模块': 'references/wechaty.md'
+    - '消息模块': 'references/message.md'
+    - '联系人模块': 'references/contact.md'
+    - '登录人模块': 'references/contact-self.md'
+    - '好友关系模块': 'references/friendship.md'
+    - '群聊模块': 'references/room.md'
+    - '群聊邀请模块': 'references/room-invitation.md'
+    - 'filebox模块': 'references/filebox.md'
+    - API文档:
+      - 'wechaty.Wechaty': 'api/wechaty.md'
+      - 'wechaty.accessory': 'api/accessory.md'
+      - 'wechaty.config': 'api/config.md'
+      - 'wechaty.types': 'api/types.md'
+      - 'wechaty.plugin': 'api/plugin.md'
+      - wechaty.utils:
+        - 'wechaty.utils.date_util': 'api/utils/date_util.md'
+        - 'wechaty.utils.async_helper': 'api/utils/async_helper.md'
+        - 'wechaty.utils.link': 'api/utils/link.md'
+        - 'wechaty.utils.qr_code': 'api/utils/qr_code.md'
+        - 'wechaty.utils.qrcode_teminal': 'api/utils/qrcode_terminal.md'
+        - 'wechaty.utils.type_check': 'api/utils/type_check.md'
+      - wechaty.user:
+        - 'wechaty.user.contact': 'api/user/contact.md'
+        - 'wechaty.user.contact_self': 'api/user/contact_self.md'
+        - 'wechaty.user.favorite': 'api/user/favorite.md'
+        - 'wechaty.user.friendship': 'api/user/friendship.md'
+        - 'wechaty.user.image': 'api/user/image.md'
+        - 'wechaty.user.message': 'api/user/message.md'
+        - 'wechaty.user.mini_program': 'api/user/mini_program.md'
+        - 'wechaty.user.room': 'api/user/room.md'
+        - 'wechaty.user.room_invitation': 'api/user/room_invitation.md'
+        - 'wechaty.user.tag': 'api/user/tag.md'
+        - 'wechaty.user.url_link': 'api/user/url_link.md'
+  - 设计理念:
+    - 介绍: 'explanation/index.md'
+    - 不同协议比较: 'explanation/different_protocol.md'
+    - 插件系统: 'explanation/why_plugin.md'
+  - FAQ:
+    - '基础常见问题': 'faq/common.md'
+    - '什么是Puppet': 'faq/what-is-a-puppet.md'
+
+theme:
+  name: material
+  logo: img/wechaty-icon-white.svg
+  favicon: img/favicon.ico
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      baselevel: 2
+
+google_analytics:
+  - G-1TDFTF2BYD
+  - auto
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            filters:
+              - "!^_"  # exlude all members starting with _
+              - "^__init__$"  # but always include __init__ modules and methods
+          rendering:
+            show_root_heading: yes
+            show_root_full_path: false
+            members_order: source
+            heading_level: 2
+      watch:
+        - ./src

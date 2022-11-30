@@ -1,0 +1,4 @@
+include LICENSE README.md VERSION
+recursive-include src **/*.py
+recursive-include src **/*.pyi
+recursive-exclude src **/*_test.py
