@@ -19,7 +19,7 @@ AntiFraudChatBot是基于大规模预训练中文模型、语义识别与检测�
 ## 框架说明
 - [x] 基于wechaty框架，AI可以7x24的实时、无缝进行微信对话
 - [x] 对话核心是YUAN1.0——2457亿参数的开源中文预训练大模型
-- [x] 整体框架模块化设计，对话核心可被替换为其他模型（文心、盘古等）
+- [x] 框架模块化设计，支持替换其他对话模型接口（chatGPT、文心等）
 - [x] 端到端生成，服务启动后可以持续对话（除非云服务器宕机）
 
 
@@ -273,7 +273,7 @@ os.environ['WECHATY_PUPPET_SERVICE_ENDPOINT']='127.198.0.0:0000(你的虚拟服�
 
 ## Citation
 ```
-@misc{EssayKillerBrain,
+@misc{AntiFraudChatBot,
   author = {Turing's Cat},
   title = {AntiFraud AI Framework},
   year = {2022},
