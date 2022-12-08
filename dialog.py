@@ -49,7 +49,8 @@ class AntifraudBotBuilder(object):
         self.data = None
         self.hold = None
         self.persona = None
-        self.statement = "你好~在聊天前需要声明：\n1.当前对话不涉及任何隐私信息，双方共同确认对话的可公开性，\n" \
+        self.statement = "你好~在使用此AI前需要声明：
+                         "\n1.当前对话不涉及任何隐私信息，双方共同确认对话的可公开性，\n" \
                          "2.对话过程中请勿讨论敏感话题，否则需自行承担不当言论可能造成的法律风险。\n" \
                          "3.如不接受请即刻停止对话，继续对话将被视为完全理解并接受上述声明。"
         self.memory_len = 2 << 5
@@ -212,6 +213,12 @@ class AntifraudBotBuilder(object):
             f.write(reply + "\n")
         return reply
 
+    def combine_multi_dialog(self) -> boolean:
+        """
+        部分功能还在调试，暂不开源
+        """
+        return
+    
     async def on_message(self, msg: Message):
         """
         Message Handler for the Bot
@@ -245,6 +252,9 @@ class AntifraudBotBuilder(object):
         if text in self.hold or text[1:] in self.hold:
             return
 
+        #根据时间窗口将多轮对话合并成一句
+        self.combine_multi_dialog()
+        
         text = text.replace(r'\s', "，").replace("#", "号").replace("&", "和")
         # bad_detection_result = self.bad_detection.detection(texts=[text], use_gpu=True, batch_size=1)
         #
