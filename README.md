@@ -268,7 +268,7 @@ os.environ['WECHATY_PUPPET_SERVICE_ENDPOINT']='127.198.0.0:0000(你的虚拟服�
 * 2022.10.23 开始真实场景聊天
 * 2022.11.07 数据收集反馈
 * 2022.11.18 优化Prompt设计与参数
-* 2022.12.29 代码Review与开源发布
+* 2022.12.09 代码Review与开源发布
 
 
 ## Citation
