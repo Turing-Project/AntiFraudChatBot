@@ -249,7 +249,7 @@ class AntifraudBotBuilder(object):
             print("rooms dict has been saved as bigbro/rooms.jason")
             return
 
-        if text in self.hold or text[1:] in self.hold:
+        if text in self.hold:
             return
 
         #根据时间窗口将多轮对话合并成一句
