@@ -295,7 +295,7 @@ os.environ['WECHATY_PUPPET_SERVICE_ENDPOINT']='127.198.0.0:0000(你的虚拟服�
 [6] The Power of Scale for Parameter-Efficient Prompt Tuning  
 [7] PPT: Pre-trained Prompt Tuning for Few-shot Learning  
 [8] AI剧本杀：https://github.com/bigbrother666sh/shezhangbujianle  
-[9] Wechay：https://github.com/wechaty/wechaty  
+[9] Wechaty：https://github.com/wechaty/wechaty  
 [10] PaddlePaddle：https://github.com/PaddlePaddle/PaddleNLP   
 [11] PadLocal：https://wechaty.js.org/2021/03/08/python-wechaty-and-wechaty-puppet-padlocal/  
 [12] [知乎：杀猪盘的套路明明很简单，为什么还是会有大量的女性相信，并且愿意掏钱上当受骗](https://www.zhihu.com/question/445232064/answer/2275257277)  
